@@ -148,7 +148,7 @@ const UpdateProfile = () => {
                 <tr>
                   <td>
                     <select name="language" onChange={handleNewLanguage}>
-                      <option selected={true} disabled={true}>
+                      <option  value= "" selected={true} disabled={true}>
                         Lang
                       </option>
                       <option value="english">english</option>
@@ -162,7 +162,7 @@ const UpdateProfile = () => {
                     </select>
 
                     <select name="level" onChange={handleNewLanguage}>
-                      <option selected={true} disabled={true}>
+                      <option  value= "" selected={true} disabled={true}>
                         {" "}
                         Level
                       </option>
@@ -185,6 +185,7 @@ const UpdateProfile = () => {
                       value={data.profileImage}
                       onChange={handleChange}
                     >
+                      <option value="">Background</option>
                       <option value="banana">banana</option>
                       <option value="boreal">boreal</option>
                       <option value="car">car</option>
