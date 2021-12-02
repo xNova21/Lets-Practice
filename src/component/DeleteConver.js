@@ -14,7 +14,7 @@ const DeleteConver = () => {
     setLoading({ loading: true });
     try {
       x = await axios.delete(
-        `http://localhost:5000/api/router/delete/${window.localStorage.converId}`,
+        `https://letspracticelanguage.herokuapp.com/api/router/delete/${window.localStorage.converId}`,
         { headers: { token: window.localStorage.token } }
       );
       setMessage({ message: x.data.message });

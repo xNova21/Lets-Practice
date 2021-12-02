@@ -56,7 +56,7 @@ const SelfProfile = () => {
     let getdata;
     try {
       getdata = await axios.get(
-        "http://localhost:5000/api/router/home/profile",
+        "https://letspracticelanguage.herokuapp.com/api/router/home/profile",
         { headers: { token: window.localStorage.token } }
       );
       setData(getdata.data);

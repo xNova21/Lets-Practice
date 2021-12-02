@@ -24,7 +24,7 @@ const SignUp = () => {
     setLoading({ loading: true });
     if (info.password === info.repeatPassword) {
       try {
-        sign = await axios.post("http://localhost:5000/api/auth/signUp", info);
+        sign = await axios.post("https://letspracticelanguage.herokuapp.com/api/auth/signUp", info);
       } catch (error) {
         setLoading({ loading: false });
         return setMessage({ message: "Server error." });

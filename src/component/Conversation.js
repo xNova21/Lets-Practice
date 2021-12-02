@@ -13,7 +13,7 @@ const Conversation = () => {
     data: [],
   });
   async function getConversation() {
-    let url = `http://localhost:5000/api/router/user/${window.localStorage.user2}`;
+    let url = `https://letspracticelanguage.herokuapp.com/api/router/user/${window.localStorage.user2}`;
     let info;
     try {
       info = await axios.get(url, {

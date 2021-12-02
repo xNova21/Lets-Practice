@@ -9,7 +9,7 @@ const PrivateRoute = () => {
   let [loading, setLoading] = useState({ loading: true });
   let verify = async () => {
     try {
-      x = await axios.get("http://localhost:5000/api/router/validateUser", {
+      x = await axios.get("https://letspracticelanguage.herokuapp.com/api/router/validateUser", {
         headers: { token: window.localStorage.token },
       });
       setInfo(x.data)

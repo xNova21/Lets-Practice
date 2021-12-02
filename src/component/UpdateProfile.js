@@ -51,7 +51,7 @@ const UpdateProfile = () => {
     let getdata;
     try {
       getdata = await axios.get(
-        "http://localhost:5000/api/router/home/profile",
+        "https://letspracticelanguage.herokuapp.com/api/router/home/profile",
         { headers: { token: window.localStorage.token } }
       );
       setData(getdata.data);
@@ -69,7 +69,7 @@ const UpdateProfile = () => {
   async function updateProfile() {
     setLoading({ loading: true });
     try {
-      await axios.post("http://localhost:5000/api/router/updateProfile", data, {
+      await axios.post("https://letspracticelanguage.herokuapp.com/api/router/updateProfile", data, {
         headers: { token: window.localStorage.token },
       });
     } catch (error) {

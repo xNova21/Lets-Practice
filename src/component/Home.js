@@ -16,7 +16,7 @@ const Home = () => {
     data: [],
   });
   async function getHome() {
-    let url = "http://localhost:5000/api/router/home";
+    let url = "https://letspracticelanguage.herokuapp.com/api/router/home";
     let info;
     try {
       info = await axios.get(url, {

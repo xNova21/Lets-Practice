@@ -62,7 +62,7 @@ const Profile = () => {
     if (valoration.valoration !== {}) {
       setLoading({ loading: true });
       await axios.post(
-        `http://localhost:5000/api/router/valoration/${window.localStorage.user2}`,
+        `https://letspracticelanguage.herokuapp.com/api/router/valoration/${window.localStorage.user2}`,
         valoration,
         { headers: { token: window.localStorage.token } }
       );
@@ -74,7 +74,7 @@ const Profile = () => {
     let getdata;
     try {
       getdata = await axios.get(
-        `http://localhost:5000/api/router/profile/${window.localStorage.user2}`,
+        `https://letspracticelanguage.herokuapp.com/api/router/profile/${window.localStorage.user2}`,
         { headers: { token: window.localStorage.token } }
       );
       setData(getdata.data);

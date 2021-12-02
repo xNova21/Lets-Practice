@@ -20,7 +20,7 @@ const Login = () => {
     let getToken;
     setLoading({ loading: true });
     try {
-      getToken = await axios.post("http://localhost:5000/api/auth/logIn", info);
+      getToken = await axios.post("https://letspracticelanguage.herokuapp.com/api/auth/logIn", info);
     } catch (error) {
       setLoading({ loading: false });
       return setMessage({ message: "Server error." });
