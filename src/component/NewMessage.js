@@ -62,7 +62,7 @@ const NewMessage = () => {
               />
               <div>
                 <input className="inputmargin" type="submit" value="Send" />
-                <Link to="/conversation">
+                <Link to="/home">
                   <button className="inputmargin">
                     <img className="arrow" alt="Return" src={backArrow} />
                   </button>
