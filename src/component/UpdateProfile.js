@@ -92,8 +92,8 @@ const UpdateProfile = () => {
           <Loading />
         </div>
       ) : (
-        <div className={`d-flex-column ${data.profileImage}`}>
-          <form onSubmit={updateProfile}>
+        <div className={` login d-flex-column ${data.profileImage}`}>
+          <form  onSubmit={updateProfile}>
             <table className="table">
               <tbody>
                 <tr>
