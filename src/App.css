@@ -1,0 +1,303 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 3s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.img-asd {
+  width: 90vw;
+}
+.backgroundColor {
+  background: linear-gradient(to right, aquamarine, rgb(20, 32, 141));
+}
+
+.meColor {
+  background: rgb(152, 152, 201);
+}
+.otherColor {
+  background: lightgray;
+}
+.levelIcon {
+  width: 50px;
+}
+
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 5px rgb(152, 152, 201);
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+.bold {
+  font-weight: bold;
+}
+.white {
+  background: white;
+}
+/* Backgounds */
+.banana {
+  background-image: url("./images/background/banana.jpeg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+.boreal {
+  background-image: url("./images/background/boreal.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.car {
+  background-image: url("./images/background/car.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cloudy-forest {
+  background-image: url("./images/background/cloudy-forest.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.desk {
+  background-image: url("./images/background/desk.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.donuts {
+  background-image: url("./images/background/donuts.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forest {
+  background-image: url("./images/background/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inside-car {
+  background-image: url("./images/background/inside-car.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.leafs {
+  background-image: url("./images/background/leafs.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.motorbike {
+  background-image: url("./images/background/motorbike.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.night-city {
+  background-image: url("./images/background/night-city.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sand {
+  background-image: url("./images/background/sand.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sky-building {
+  background-image: url("./images/background/sky-building.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stars {
+  background-image: url("./images/background/stars.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.train {
+  background-image: url("./images/background/train.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  width: fit-content;
+}
+.starIcon {
+  height: 30px;
+  background: grey;
+}
+.buttonWith {
+  width: 100px;
+}
+* {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.background {
+  background-image: url("./images/5831292.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: 100%;
+  background-position-y: 100px;
+}
+h1 {
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+@media (min-width: 500px) {
+  .d-flex-column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+      
+  }
+  .inputmargin {
+    margin-top: 15px;
+  }
+  .margin {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 499px) {
+  .d-flex-column2 {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  }
+  .inputmargin{
+    margin-top: 5px;
+  }
+  .margin {
+    margin-left: 5vw;
+    margin-right:  5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+}
+.arrow {
+  height: 20px;
+}
+
+.geeks {
+  width: 20%;
+  top: 50%;
+  position: absolute;
+  left: 40%;
+  border-bottom: 5px solid white;
+  overflow: hidden;
+  animation: animate 2s linear forwards;
+}
+
+.geeks h1 {
+  color: rgb(37, 65, 223);
+  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+
+}
+
+@keyframes animate {
+  0% {
+      width: 0px;
+      height: 0px;
+  }
+  30% {
+      width: 50px;
+      height: 0px;
+  }
+  60% {
+      width: 50px;
+      height: 80px;
+  }
+}
