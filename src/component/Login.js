@@ -59,8 +59,8 @@ const Login = () => {
               />
               <input className="inputmargin" type="submit" value="Log in" />
               <label className="inputmargin">Don´t have an account?</label>
-              <Link to="signUp">
-                <button className="inputmargin ">Register now</button>
+              <Link to="/signUp">
+                <span className="inputmargin ">Register now</span>
               </Link>
             </form>
             {params.message}

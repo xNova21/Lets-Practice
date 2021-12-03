@@ -22,7 +22,7 @@ const SignUp = () => {
     setMessage({ message: "" });
     let sign;
     setLoading({ loading: true });
-    if (info.password === info.repeatPassword) {
+    if (info.password === info.repeatPassword && info.languageSpoken !== "") {
       try {
         sign = await axios.post("https://letspracticelanguage.herokuapp.com/api/auth/signUp", info);
       } catch (error) {
@@ -33,11 +33,14 @@ const SignUp = () => {
       setMessage({ message: sign.data.message });
       if (sign.data.message.includes("User created") === true) {
         setTimeout(() => {
-          navigate("/logIn");
+          navigate("logIn");
         }, 1000);
       }
-    } else {
+    } else if (info.password !== info.repeatPassword ) {
       setMessage({ message: "Passwords doesn´t match." });
+    }
+    else if(info.languageSpoken === ""){
+      setMessage({ message: "Select your native language." })
     }
   };
   return (
@@ -90,8 +93,8 @@ const SignUp = () => {
               </select>
               <input className="inputmargin" type="submit" value="Sign up" />
               <label className="inputmargin">Already have an account?</label>
-              <Link to="logIn">
-                <button className="inputmargin">Log in</button>
+              <Link to="/logIn">
+                <span className="inputmargin">Log in</span>
               </Link>
             </form>
           </div>

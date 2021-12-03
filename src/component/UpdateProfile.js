@@ -25,7 +25,6 @@ const UpdateProfile = () => {
 
   let handleNewLanguage = (event) => {
     newLanguage[event.target.name] = event.target.value;
-    console.log(newLanguage);
   };
   let addNewLanguage = (event) => {
     event.preventDefault();
@@ -37,8 +36,8 @@ const UpdateProfile = () => {
       setLoading({ loading: true });
       data.practice[newLanguage.language] = newLanguage.level;
       setLoading({ loading: false });
-    } else if (!data.practice) {
-      console.log(data.practice);
+    } else if ( newLanguage.language !== "" &&
+    newLanguage.level !== "" && !data.practice) {
       setLoading({ loading: true });
       setData({
         ...data,
@@ -116,7 +115,7 @@ const UpdateProfile = () => {
                     Object.keys(data.practice).map((x) => {
                       return (
                         <tr>
-                          <td>{x}</td>
+                          <td>{x}{"  "}{data.practice[x]}{" to "}</td>
                           <td>
                             <select
                               onChange={handleLevel}
@@ -124,7 +123,7 @@ const UpdateProfile = () => {
                               value={data.practice.x}
                             >
                               <option selected={true} disabled={true}>
-                                Select level to change it
+                                Select other level
                               </option>
                               <option value="begginer">Begginer</option>
                               <option value="low">Low</option>
