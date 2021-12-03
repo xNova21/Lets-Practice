@@ -115,7 +115,7 @@ const Profile = () => {
             ) : (
               <div>
                 <select name="valoration" onChange={handleChange}>
-                  <option disabled={true}> Select number</option>
+                  <option selected={true} disabled={true}> Select number</option>
                   <option value={1}>1</option>
                   <option value={2}>2</option>
                   <option value={3}>3</option>

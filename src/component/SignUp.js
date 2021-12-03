@@ -24,7 +24,10 @@ const SignUp = () => {
     setLoading({ loading: true });
     if (info.password === info.repeatPassword && info.languageSpoken !== "") {
       try {
-        sign = await axios.post("https://letspracticelanguage.herokuapp.com/api/auth/signUp", info);
+        sign = await axios.post(
+          "https://letspracticelanguage.herokuapp.com/api/auth/signUp",
+          info
+        );
       } catch (error) {
         setLoading({ loading: false });
         return setMessage({ message: "Server error." });
@@ -36,11 +39,10 @@ const SignUp = () => {
           navigate("logIn");
         }, 1000);
       }
-    } else if (info.password !== info.repeatPassword ) {
+    } else if (info.password !== info.repeatPassword) {
       setMessage({ message: "Passwords doesn´t match." });
-    }
-    else if(info.languageSpoken === ""){
-      setMessage({ message: "Select your native language." })
+    } else if (info.languageSpoken === "") {
+      setMessage({ message: "Select your native language." });
     }
   };
   return (
