@@ -301,3 +301,19 @@ h1 {
       height: 80px;
   }
 }
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer p, a {
+  margin: 10px 30px 10px 10px;
+  text-shadow: 1px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+  1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.about p{
+margin: 10vh 30vw 10vh 30vw;
+}

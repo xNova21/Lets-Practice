@@ -13,6 +13,8 @@ import DeleteConver from "./component/DeleteConver";
 import UpdateProfile from "./component/UpdateProfile";
 import Search from "./component/Search";
 import Profile from "./component/Profile";
+import Footer from "./component/Footer";
+import AboutMe from "./component/AboutMe";
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,7 @@ function App() {
           <Route path=":/" element={<Login />} />
         </Route>
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/aboutMe" element={<AboutMe/>}/>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/home" element={<Home />} />
           <Route path="/conversation" element={<Conversation />} />
@@ -34,6 +37,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
