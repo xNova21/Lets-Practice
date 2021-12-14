@@ -36,8 +36,11 @@ const UpdateProfile = () => {
       setLoading({ loading: true });
       data.practice[newLanguage.language] = newLanguage.level;
       setLoading({ loading: false });
-    } else if ( newLanguage.language !== "" &&
-    newLanguage.level !== "" && !data.practice) {
+    } else if (
+      newLanguage.language !== "" &&
+      newLanguage.level !== "" &&
+      !data.practice
+    ) {
       setLoading({ loading: true });
       setData({
         ...data,
@@ -68,9 +71,13 @@ const UpdateProfile = () => {
   async function updateProfile() {
     setLoading({ loading: true });
     try {
-      await axios.post("https://letspracticelanguage.herokuapp.com/api/router/updateProfile", data, {
-        headers: { token: window.localStorage.token },
-      });
+      await axios.post(
+        "https://letspracticelanguage.herokuapp.com/api/router/updateProfile",
+        data,
+        {
+          headers: { token: window.localStorage.token },
+        }
+      );
     } catch (error) {
       setMessage({ message: "Server error." });
       setLoading({ loading: false });
@@ -91,8 +98,8 @@ const UpdateProfile = () => {
           <Loading />
         </div>
       ) : (
-        <div className={` login d-flex-column ${data.profileImage}`}>
-          <form  onSubmit={updateProfile}>
+        <div className={`  d-flex-column ${data.profileImage}`}>
+          <form onSubmit={updateProfile}>
             <table className="table">
               <tbody>
                 <tr>
@@ -115,7 +122,12 @@ const UpdateProfile = () => {
                     Object.keys(data.practice).map((x) => {
                       return (
                         <tr>
-                          <td>{x}{"  "}{data.practice[x]}{" to "}</td>
+                          <td>
+                            {x}
+                            {"  "}
+                            {data.practice[x]}
+                            {" to "}
+                          </td>
                           <td>
                             <select
                               onChange={handleLevel}
@@ -147,7 +159,7 @@ const UpdateProfile = () => {
                 <tr>
                   <td>
                     <select name="language" onChange={handleNewLanguage}>
-                      <option  value= "" selected={true} disabled={true}>
+                      <option value="" selected={true} disabled={true}>
                         Lang
                       </option>
                       <option value="english">english</option>
@@ -161,7 +173,7 @@ const UpdateProfile = () => {
                     </select>
 
                     <select name="level" onChange={handleNewLanguage}>
-                      <option  value= "" selected={true} disabled={true}>
+                      <option value="" selected={true} disabled={true}>
                         {" "}
                         Level
                       </option>
