@@ -89,19 +89,7 @@ table {
 }
 
 
-.d-flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 5px rgb(152, 152, 201);
-  margin-left: 20vw;
-  margin-right: 20vw;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
-    1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-}
+
 .d-flex {
   display: flex;
   flex-direction: row;
@@ -207,18 +195,59 @@ table {
 * {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-.background {
-  background-image: url("./images/5831292.jpg");
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-size: 100%;
-  background-position-y: 100px;
+@media(max-width: 1000px){
+  .background {
+    background-image: url("./images/5831292.jpg");
+    background-position-y: 100px;
+    height: 100vh;
+    background-size: 100vh;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position-x: -30px;
+
+  }
+  .d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px rgb(152, 152, 201);
+   
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  }
 }
+@media(min-width: 1001px){
+  .background {
+    background-image: url("./images/5831292.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: 100%;
+    background-position-y: 100px;
+  }
+  .d-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 5px rgb(152, 152, 201);
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+      1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+  }
+}
+
 h1 {
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
     1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 @media (min-width: 500px) {
+  
   .d-flex-column2 {
     display: flex;
     justify-content: center;
@@ -272,7 +301,7 @@ h1 {
 }
 
 .geeks {
-  width: 20%;
+  width: 35%;
   top: 50%;
   position: absolute;
   left: 40%;

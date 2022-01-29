@@ -100,7 +100,7 @@ const UpdateProfile = () => {
       ) : (
         <div className={`  d-flex-column ${data.profileImage}`}>
           <form onSubmit={updateProfile}>
-            <table className="table">
+            <table className="tabla">
               <tbody>
                 <tr>
                   <td>Username</td>
