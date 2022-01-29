@@ -13,4 +13,17 @@ The main of this website is practice other languages by exchange with other user
 
 ##  How to start using it
 
+### Get an account
+
 You can create your profile at sign up tab.
+
+<img src="https://github.com/xNova21/Lets-Practice/blob/master/readme-images/sign.png?raw=true" alt="Sign up Image"/>
+
+You'll need an unique username and after set your password, choose your native language.
+
+After register, you'll be redirect to login page.
+
+### After log in
+
+
+
