@@ -196,6 +196,15 @@ table {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 @media(max-width: 1000px){
+  .geeks {
+    width: 35%;
+    top: 50%;
+    position: absolute;
+    left: 40%;
+    border-bottom: 5px solid white;
+    overflow: hidden;
+    animation: animate 2s linear forwards;
+  }
   .background {
     background-image: url("./images/5831292.jpg");
     background-position-y: 100px;
@@ -219,6 +228,15 @@ table {
   }
 }
 @media(min-width: 1001px){
+  .geeks {
+    width: 20%;
+    top: 50%;
+    position: absolute;
+    left: 40%;
+    border-bottom: 5px solid white;
+    overflow: hidden;
+    animation: animate 2s linear forwards;
+  }
   .background {
     background-image: url("./images/5831292.jpg");
     background-repeat: no-repeat;
@@ -299,15 +317,7 @@ h1 {
   height: 20px;
 }
 
-.geeks {
-  width: 35%;
-  top: 50%;
-  position: absolute;
-  left: 40%;
-  border-bottom: 5px solid white;
-  overflow: hidden;
-  animation: animate 2s linear forwards;
-}
+
 
 .geeks h1 {
   color: rgb(37, 65, 223);

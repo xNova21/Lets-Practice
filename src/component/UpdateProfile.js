@@ -224,7 +224,7 @@ const UpdateProfile = () => {
             <div>
               <textarea
                 rows="4"
-                cols="50"
+                cols="40"
                 name="profileText"
                 onChange={handleChange}
                 value={data.profileText}
