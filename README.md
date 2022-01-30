@@ -9,7 +9,7 @@ The main of this website is practice other languages by exchange with other user
 
 [Heroku](https://github.com/xNova21/Lets-Practice.git "Heroku")
 
-## If you prefere to run locally
+## If you prefer to run locally
 
 1.  `$ git clone https://github.com/xNova21/Lets-Practice.git`
 2.  `$ cd Lets-Practice`
