@@ -62,7 +62,7 @@ const Profile = () => {
     if (valoration.valoration !== {}) {
       setLoading({ loading: true });
       await axios.post(
-        `https://letspracticelanguage.herokuapp.com/api/router/valoration/${window.localStorage.user2}`,
+        `${process.env.URL}/api/router/valoration/${window.localStorage.user2}`,
         valoration,
         { headers: { token: window.localStorage.token } }
       );
@@ -74,7 +74,7 @@ const Profile = () => {
     let getdata;
     try {
       getdata = await axios.get(
-        `https://letspracticelanguage.herokuapp.com/api/router/profile/${window.localStorage.user2}`,
+        `${process.env.URL}/api/router/profile/${window.localStorage.user2}`,
         { headers: { token: window.localStorage.token } }
       );
       setData(getdata.data);
@@ -115,7 +115,10 @@ const Profile = () => {
             ) : (
               <div>
                 <select name="valoration" onChange={handleChange}>
-                  <option selected={true} disabled={true}> Select number</option>
+                  <option selected={true} disabled={true}>
+                    {" "}
+                    Select number
+                  </option>
                   <option value={1}>1</option>
                   <option value={2}>2</option>
                   <option value={3}>3</option>

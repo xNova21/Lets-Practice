@@ -78,9 +78,11 @@ const Search = () => {
     let result;
     try {
       result = await axios.post(
-        "https://letspracticelanguage.herokuapp.com/api/router/user/form",
+        "${process.env.URL}/api/router/user/form",
         data,
-        { headers: { token: window.localStorage.token } }
+        {
+          headers: { token: window.localStorage.token },
+        }
       );
       setResult(result.data);
       setLoading({ loading: false });

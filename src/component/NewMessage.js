@@ -18,7 +18,7 @@ const NewMessage = () => {
     if (info.text !== "") {
       try {
         newMess = await axios.post(
-          `https://letspracticelanguage.herokuapp.com/api/router/newMessage/${window.localStorage.user2}`,
+          `${process.env.URL}/api/router/newMessage/${window.localStorage.user2}`,
           info,
           { headers: { token: window.localStorage.token } }
         );

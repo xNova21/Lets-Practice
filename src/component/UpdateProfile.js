@@ -52,10 +52,9 @@ const UpdateProfile = () => {
   async function getProfile() {
     let getdata;
     try {
-      getdata = await axios.get(
-        "https://letspracticelanguage.herokuapp.com/api/router/home/profile",
-        { headers: { token: window.localStorage.token } }
-      );
+      getdata = await axios.get("${process.env.URL}/api/router/home/profile", {
+        headers: { token: window.localStorage.token },
+      });
       setData(getdata.data);
       setLoading({ loading: false });
     } catch (error) {
@@ -71,13 +70,9 @@ const UpdateProfile = () => {
   async function updateProfile() {
     setLoading({ loading: true });
     try {
-      await axios.post(
-        "https://letspracticelanguage.herokuapp.com/api/router/updateProfile",
-        data,
-        {
-          headers: { token: window.localStorage.token },
-        }
-      );
+      await axios.post("${process.env.URL}/api/router/updateProfile", data, {
+        headers: { token: window.localStorage.token },
+      });
     } catch (error) {
       setMessage({ message: "Server error." });
       setLoading({ loading: false });

@@ -13,7 +13,7 @@ const Conversation = () => {
     data: [],
   });
   async function getConversation() {
-    let url = `https://letspracticelanguage.herokuapp.com/api/router/user/${window.localStorage.user2}`;
+    let url = `${process.env.URL}/api/router/user/${window.localStorage.user2}`;
     let info;
     try {
       info = await axios.get(url, {
@@ -89,12 +89,12 @@ const Conversation = () => {
               <button className="inputmargin buttonWith">New</button>
             </Link>
             <Link to="/deleteConver">
-              <button className="inputmargin buttonWith">
-                Delete
-              </button>
+              <button className="inputmargin buttonWith">Delete</button>
             </Link>
             <Link to="/home">
-              <button className="inputmargin buttonWith"><img className="arrow" alt="return" src={backArrow}/></button>
+              <button className="inputmargin buttonWith">
+                <img className="arrow" alt="return" src={backArrow} />
+              </button>
             </Link>
           </div>
         </div>

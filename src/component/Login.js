@@ -4,7 +4,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "./Loading";
 
-
 const Login = () => {
   let params = useParams();
   let navigate = useNavigate();
@@ -20,7 +19,7 @@ const Login = () => {
     let getToken;
     setLoading({ loading: true });
     try {
-      getToken = await axios.post("https://letspracticelanguage.herokuapp.com/api/auth/logIn", info);
+      getToken = await axios.post("${process.env.URL}/api/auth/logIn", info);
     } catch (error) {
       setLoading({ loading: false });
       return setMessage({ message: "Server error." });
@@ -38,7 +37,7 @@ const Login = () => {
   return (
     <div className="background">
       <Navba loged={false} />
-      
+
       {message.message === "" ? (
         loading.loading === false ? (
           <div className="margin ">
@@ -66,10 +65,14 @@ const Login = () => {
             {params.message}
           </div>
         ) : (
-          <div><Loading/></div>
+          <div>
+            <Loading />
+          </div>
         )
       ) : message.message.includes("Wellcome") === true ? (
-        <div className="geeks"><h1>{message.message}</h1></div>
+        <div className="geeks">
+          <h1>{message.message}</h1>
+        </div>
       ) : (
         <div className="margin">
           <h1> Log in</h1>

@@ -16,7 +16,7 @@ const Home = () => {
     data: [],
   });
   async function getHome() {
-    let url = "https://letspracticelanguage.herokuapp.com/api/router/home";
+    let url = "${process.env.URL}/api/router/home";
     let info;
     try {
       info = await axios.get(url, {
@@ -49,7 +49,9 @@ const Home = () => {
     <div>
       <Navba loged={true} />
       {loading.loading === true ? (
-        <div><Loading/></div>
+        <div>
+          <Loading />
+        </div>
       ) : (
         <div className="margin">
           <table className="table">
