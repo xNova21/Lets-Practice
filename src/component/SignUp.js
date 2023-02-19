@@ -24,7 +24,7 @@ const SignUp = () => {
     setLoading({ loading: true });
     if (info.password === info.repeatPassword && info.languageSpoken !== "") {
       try {
-        sign = await axios.post("${process.env.URL}/api/auth/signUp", info);
+        sign = await axios.post(`${process.env.URL}/api/auth/signUp`, info);
       } catch (error) {
         setLoading({ loading: false });
         return setMessage({ message: "Server error." });

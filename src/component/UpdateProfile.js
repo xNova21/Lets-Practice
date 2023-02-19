@@ -52,7 +52,7 @@ const UpdateProfile = () => {
   async function getProfile() {
     let getdata;
     try {
-      getdata = await axios.get("${process.env.URL}/api/router/home/profile", {
+      getdata = await axios.get(`${process.env.URL}/api/router/home/profile`, {
         headers: { token: window.localStorage.token },
       });
       setData(getdata.data);
@@ -70,7 +70,7 @@ const UpdateProfile = () => {
   async function updateProfile() {
     setLoading({ loading: true });
     try {
-      await axios.post("${process.env.URL}/api/router/updateProfile", data, {
+      await axios.post(`${process.env.URL}/api/router/updateProfile`, data, {
         headers: { token: window.localStorage.token },
       });
     } catch (error) {

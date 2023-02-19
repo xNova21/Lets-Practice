@@ -16,7 +16,7 @@ const Home = () => {
     data: [],
   });
   async function getHome() {
-    let url = "${process.env.URL}/api/router/home";
+    let url = `${process.env.URL}/api/router/home`;
     let info;
     try {
       info = await axios.get(url, {

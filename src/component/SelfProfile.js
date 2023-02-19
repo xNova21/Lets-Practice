@@ -55,7 +55,7 @@ const SelfProfile = () => {
   async function getProfile() {
     let getdata;
     try {
-      getdata = await axios.get("${process.env.URL}/api/router/home/profile", {
+      getdata = await axios.get(`${process.env.URL}/api/router/home/profile`, {
         headers: { token: window.localStorage.token },
       });
       setData(getdata.data);

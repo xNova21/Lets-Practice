@@ -19,7 +19,7 @@ const Login = () => {
     let getToken;
     setLoading({ loading: true });
     try {
-      getToken = await axios.post("${process.env.URL}/api/auth/logIn", info);
+      getToken = await axios.post(`${process.env.URL}/api/auth/logIn`, info);
     } catch (error) {
       setLoading({ loading: false });
       return setMessage({ message: "Server error." });

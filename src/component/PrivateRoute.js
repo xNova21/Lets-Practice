@@ -9,7 +9,7 @@ const PrivateRoute = () => {
   let [loading, setLoading] = useState({ loading: true });
   let verify = async () => {
     try {
-      x = await axios.get("${process.env.URL}/api/router/validateUser", {
+      x = await axios.get(`${process.env.URL}/api/router/validateUser`, {
         headers: { token: window.localStorage.token },
       });
       setInfo(x.data);
